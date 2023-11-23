@@ -53,8 +53,8 @@
 
     button {
         border-radius: 20px;
-        border: 1px solid #ff4b2b;
-        background-color: #ff4b2b;
+        border: 1px solid skyblue;
+        background-color: skyblue;
         color: #ffffff;
         font-size: 12px;
         font-weight: bold;
@@ -168,9 +168,7 @@
     }
 
     .overlay {
-        background: #ff416c;
-        background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-        background: linear-gradient(to right, #ff4b2b, #ff416c);
+        background: skyblue;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 0 0;
@@ -266,18 +264,19 @@
 <div class="container" id="container">
 	<div class="form-container sign-up-container">
 		<form action="registerAcc" method="post">
+            
 			<h1>Create Account</h1>
             <?php if(isset($validation)):?>
                                         <div class="alert alert-warning">
                                             <?=$validation->listErrors()?>
                                         </div>
                                     <?php endif;?>
-			<div class="social-container">
+			<div class="social-container"><!-- 
 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
 			</div>
-			<span>or use your email for registration</span>
+			<!-- <span>or use your email for registration</span> -->
 			<input type="text" id="Username" name="Username" placeholder="Username" value="<?=set_value('Username')?>"/>
 			<input type="email" id="Email" name="Email" placeholder="Email" value="<?=set_value('Email')?>"/>
 			<input type="password" id="Password" name="Password"placeholder="Password" value="<?=set_value('Password')?>"/>
@@ -288,17 +287,18 @@
 	<div class="form-container sign-in-container">
         <form action="/loginAuth" method="post">
 			<h1>Sign in</h1>
+            
             <?php if(session()->getFlashdata('msg')):?>
                         <div class="alert alert-warning">
                             <?=session()->getFlashdata('msg');?>
                         </div>
                     <?php endif;?>
 			<div class="social-container">
-				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+<!-- 				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
 				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
 			</div>
-			<span>or use your account</span>
+			<!-- <span>or use your account</span> -->
 			<input type="email" id="Email" name="Email" placeholder="Email" value="<?= set_value('Email')?> "/>
 			<input type="password" id="Password" name="Password" placeholder="Password" />
 			<a href="#">Forgot your password?</a>
@@ -308,13 +308,11 @@
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-left">
-				<h1>Welcome Back!</h1>
-				<p>To keep connected with us please login with your personal info</p>
+            <img src="<?=base_url()?>guest/images/mahaltalogoo.png" alt="" class="dark-logo" />
 				<button class="ghost" id="signIn">Sign In</button>
 			</div>
 			<div class="overlay-panel overlay-right">
-				<h1>Hello, Friend!</h1>
-				<p>Enter your personal details and start journey with us</p>
+            <img src="<?=base_url()?>guest/images/mahaltalogoo.png" alt="" class="dark-logo" />
 				<button class="ghost" id="signUp">Sign Up</button>
 			</div>
 		</div>

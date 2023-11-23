@@ -4,7 +4,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="<?=base_url()?>guest/images/loading.gif" alt="#"/></div>
+         <div class="loader"><img src="<?=base_url()?>guest/images/mahaltalogoo.png" alt="#"/></div>
       </div>
       <!-- end loader -->
       <!-- header -->

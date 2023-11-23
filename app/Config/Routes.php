@@ -18,3 +18,8 @@ $routes->get('/login', 'UserController::loginregister');
 $routes->post('/registerAcc', 'UserController::register');
 $routes->post('/loginAuth', 'UserController::loginAuth');
 $routes->get('/logout', 'UserController::logout');
+
+$routes->get('/admin-dashboard', 'AdminController::dashboard');
+
+
+$routes->get('/staff-dashboard', 'StaffController::dashboard');
