@@ -6,11 +6,16 @@
    <title>About Us and Services</title>
    <style>
       body {
-         font-family: 'Arial', sans-serif;
-         margin: 0;
-         padding: 0;
-         background-color: #f4f4f4;
-      }
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3498db, #2ecc71); /* Replace with your desired color values */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure the gradient covers the entire viewport height */
+}
+
 
       .container-fluid, .container {
          max-width: 1200px;

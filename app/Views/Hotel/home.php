@@ -33,10 +33,13 @@
                                  <a class="nav-link" href="/home">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="/about">About</a>
+                                 <a class="nav-link" href="/about">Services</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="/room">Room</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/convention">Convention</a>
                               </li>
                               
                               <li class="nav-item">
@@ -59,7 +62,7 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <?php include 'include/banner.php'?>
+      <?php include 'include/banner2.php'?>
       <!-- end banner -->
       <!-- about -->
       <?php include 'include/about.php'?>
@@ -67,7 +70,9 @@
       <!-- our_room -->
       <?php include 'include/room.php'?>
       <!-- end our_room -->
-     
+     <!-- our_room -->
+     <?php include 'include/convention.php'?>
+      <!-- end our_room -->
       <!--  contact -->
       <?php include 'include/contact.php'?>
       <!-- end contact -->

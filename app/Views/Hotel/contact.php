@@ -4,7 +4,7 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="<?=base_url()?>guest/images/loading.gif" alt="#"/></div>
+         <div class="loader"><img src="<?=base_url()?>guest/images/mahaltalogoo.png" alt="#"/></div>
       </div>
       <!-- end loader -->
       <!-- header -->
@@ -33,12 +33,14 @@
                                  <a class="nav-link" href="/">Home</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="/about">About</a>
+                                 <a class="nav-link" href="/about">Services</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link" href="/room">Room</a>
                               </li>
-                              
+                              <li class="nav-item">
+                                 <a class="nav-link" href="/convention">Convention</a>
+                              </li>
                               
                               <li class="nav-item active">
                                  <a class="nav-link" href="/contact">Contact Us</a>

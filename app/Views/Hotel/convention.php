@@ -1,7 +1,7 @@
 
 <?php include 'include/head.php'?>
-<!-- body -->
-<body class="main-layout">
+   <!-- body -->
+   <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
          <div class="loader"><img src="<?=base_url()?>guest/images/mahaltalogoo.png" alt="#"/></div>
@@ -32,15 +32,17 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="/">Home</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="/about">Services</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="/room">Room</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item active">
                                  <a class="nav-link" href="/convention">Convention</a>
                               </li>
+                             
+                              
                               <li class="nav-item">
                                  <a class="nav-link" href="/contact">Contact Us</a>
                               </li>
@@ -62,9 +64,9 @@
       <!-- banner -->
       <?php include 'include/banner.php'?>
       <!-- end banner -->
-      <!-- about -->
-      <?php include 'include/about.php'?>
-      <!-- end about -->
+      <!-- our_room -->
+      <?php include 'include/convention.php'?>
+      <!-- end our_room -->
       <!--  footer -->
       <?php include 'include/footer.php'?>
       <!-- end footer -->
