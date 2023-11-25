@@ -36,14 +36,12 @@
                                  <a class="nav-link" href="/about">About</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="/room">Our room</a>
+                                 <a class="nav-link" href="/room">Room</a>
                               </li>
                               <li class="nav-item active">
                                  <a class="nav-link" href="/gallery">Gallery</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/blog">Blog</a>
-                              </li>
+                         
                               <li class="nav-item">
                                  <a class="nav-link" href="/contact">Contact Us</a>
                               </li>

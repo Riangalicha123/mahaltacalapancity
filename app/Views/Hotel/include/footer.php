@@ -1,3 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .feedback-container {
+            max-width: 400px;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            text-align: center;
+            color: #333;
+        }
+
+        textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+
+        button {
+            width: calc(100% - 20px);
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
 <footer>
          <div class="footer">
             <div class="container">
@@ -10,23 +62,9 @@
                         <li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> mahaltaresorts@gmail.com</a></li>
                      </ul>
                   </div>
+                  
                   <div class="col-md-4">
-                     <h3>Menu Link</h3>
-                     <ul class="link_menu">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="about.html"> about</a></li>
-                        <li><a href="room.html">Our Room</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                     </ul>
-                  </div>
-                  <div class="col-md-4">
-                     <h3>News letter</h3>
-                     <form class="bottom_form">
-                        <input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
-                        <button class="sub_btn">subscribe</button>
-                     </form>
+                     <h3>Social Media</h3>
                      <ul class="social_icon">
                         <li><a href="https://www.facebook.com/DrCEB"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -34,20 +72,23 @@
                         <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
                      </ul>
                   </div>
+                  <div class="col-md-4">
+                  <h3>Feedback</h3>
+                  
+                        <textarea id="feedback" name="feedback" placeholder="Type your feedback..." required></textarea>
+
+                        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+                  </div>
                </div>
             </div>
             <div class="copyright">
                <div class="container">
                   <div class="row">
-                     <div class="col-md-10 offset-md-1">
-                        
-                        <p>
-                        © 2023 All Rights Reserved. Design by <a href="https://github.com/riangalicha123"> TaskMaster</a>
-                        <br><br>
-                        <!-- Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a> -->
-                        </p>
-
-                     </div>
+                  <div class="col-md-10 offset-md-1">
+                  <p>
+                     &copy; 2023 All Rights Reserved. Design by <a href="https://github.com/riangalicha123" target="_blank">IIIF2 TaskMaster</a>
+                  </p>
+               </div>
                   </div>
                </div>
             </div>

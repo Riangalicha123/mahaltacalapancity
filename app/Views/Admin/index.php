@@ -448,6 +448,13 @@
 							<ul class="submenu">
 								<li><a href="blank.html">Dashboard</a></li>
 							</ul>
+							<a href="javascript:;" class="dropdown-toggle">
+								<span class="micon bi bi-back"></span
+								><span class="mtext">Services</span>
+							</a>
+							<ul class="submenu">
+								<li><a href="room.php">Room</a></li>
+							</ul>
 						</li>
 					</ul>
 				</div>

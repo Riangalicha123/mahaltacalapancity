@@ -3,7 +3,7 @@
             <ol class="carousel-indicators">
                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                <li data-target="#myCarousel" data-slide-to="1"></li>
-               <li data-target="#myCarousel" data-slide-to="2"></li>
+              
             </ol>
             <div class="carousel-inner">
                <div class="carousel-item active">
@@ -11,9 +11,7 @@
                   <div class="container">
                   </div>
                </div>
-               <div class="carousel-item">
-                  <img class="second-slide" src="<?=base_url()?>guest/images/2.jpg" alt="Second slide">
-               </div>
+               
                <div class="carousel-item">
                   <img class="third-slide" src="<?=base_url()?>guest/images/3.jpg" alt="Third slide">
                </div>
@@ -27,7 +25,7 @@
             <span class="sr-only">Next</span>
             </a>
          </div>
-         <div class="booking_ocline">
+         <!--<div class="booking_ocline">
             <div class="container">
                <div class="row">
                   <div class="col-md-5">
@@ -54,5 +52,5 @@
                   </div>
                </div>
             </div>
-         </div>
+         </div>-->
       </section>

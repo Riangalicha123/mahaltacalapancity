@@ -413,7 +413,7 @@ button {
      padding: 0;
 }
 
-.titlepage h2::before {
+/*.titlepage h2::before {
      position: absolute;
      content: "";
      background-color: skyblue;
@@ -430,7 +430,7 @@ button {
      height: 4px;
      transform: rotate(-36deg);
      bottom: 10px;
-}
+}*/
 
 .d_flex {
      display: flex;

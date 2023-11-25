@@ -36,14 +36,9 @@
                                  <a class="nav-link" href="/about">About</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="/room">Our room</a>
+                                 <a class="nav-link" href="/room">Room</a>
                               </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/gallery">Gallery</a>
-                              </li>
-                              <li class="nav-item">
-                                 <a class="nav-link" href="/blog">Blog</a>
-                              </li>
+                              
                               <li class="nav-item">
                                  <a class="nav-link" href="/contact">Contact Us</a>
                               </li>
@@ -72,12 +67,7 @@
       <!-- our_room -->
       <?php include 'include/room.php'?>
       <!-- end our_room -->
-      <!-- gallery -->
-      <?php include 'include/galery.php'?>
-      <!-- end gallery -->
-      <!-- blog -->
-      <?php include 'include/blog.php'?>
-      <!-- end blog -->
+     
       <!--  contact -->
       <?php include 'include/contact.php'?>
       <!-- end contact -->
