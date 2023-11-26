@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <link rel="stylesheet" href="path/to/your/bootstrap.css"> <!-- Add the correct path to your Bootstrap CSS -->
+    <title>Mahalta</title>
+    <link rel="stylesheet" href="path/to/your/bootstrap.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-iBhx+u0Oa7/8AMxflAvLftGzTpPe5CHd8O+JdsLkaayP/hFgUBS9uP2aTbdH5zIebprJs1Pifz1iTH8Ii2NpWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-iBhx+u0Oa7/8AMxflAvLftGzTpPe5CHd8O+JdsLkaayP/hFgUBS9uP2aTbdH5zIebprJs1Pifz1iTH8Ii2NpWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* Add your styles here */
         body {
@@ -96,8 +99,10 @@
                <div class="row">
                   <div class="col-md-5">
                      <div class="book_room">
-                        <h3>At Mahalta Resorts and Convention Center, the company motto is “Where moments and memories become one.” This reflects the resort’s commitment to providing guests with an unforgettable experience that they will cherish for a lifetime. Whether you are looking to escape the city for a relaxing beach vacation or to host a memorable event, Mahalta Resorts and Convention Center has everything you need to make your dreams a reality.</h3>
-                        
+                     <h3 style="text-align: justify;">At Mahalta Resorts and Convention Center, the company motto is “Where moments and memories become one.” This reflects the resort’s commitment to providing guests with an unforgettable experience that they will cherish for a lifetime. Whether you are looking to escape the city for a relaxing beach vacation or to host a memorable event, Mahalta Resorts and Convention Center has everything you need to make your dreams a reality.</h3>
+                    
+                   
+
                      </div>
                   </div>
                </div>

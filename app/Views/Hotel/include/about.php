@@ -64,7 +64,7 @@
       }
 
       h3 {
-         color: #333;
+         color: black;
          font-size: 24px;
          margin-bottom: 10px;
       }

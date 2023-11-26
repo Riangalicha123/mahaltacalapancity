@@ -39,9 +39,8 @@
                                  <a class="nav-link" href="/room">Room</a>
                               </li>
                               <li class="nav-item">
-                                 <a class="nav-link" href="/convention">Convention</a>
+                                 <a class="nav-link" href="/blog">Blog</a>
                               </li>
-                              
                               <li class="nav-item">
                                  <a class="nav-link" href="/contact">Contact Us</a>
                               </li>
@@ -62,7 +61,7 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
-      <?php include 'include/banner2.php'?>
+      <?php include 'include/banner.php'?>
       <!-- end banner -->
       <!-- about -->
       <?php include 'include/about.php'?>
@@ -71,7 +70,7 @@
       <?php include 'include/room.php'?>
       <!-- end our_room -->
      <!-- our_room -->
-     <?php include 'include/convention.php'?>
+     <?php include 'include/blog.php'?>
       <!-- end our_room -->
       <!--  contact -->
       <?php include 'include/contact.php'?>

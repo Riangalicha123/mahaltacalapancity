@@ -27,10 +27,7 @@ class GuestController extends BaseController
     {
         return view('Hotel\gallery');
     }
-    public function convention()
-    {
-        return view('Hotel\convention');
-    }
+    
     public function blog()
     {
         return view('Hotel\blog');

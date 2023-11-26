@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'GuestController::home');
 $routes->get('/about', 'GuestController::about');
 $routes->get('/room', 'GuestController::room');
-$routes->get('/convention', 'GuestController::convention');
+
 $routes->get('/gallert', 'GuestController::gallery');
 $routes->get('/blog', 'GuestController::blog');
 $routes->get('/contact', 'GuestController::contact');

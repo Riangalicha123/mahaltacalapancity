@@ -35,13 +35,12 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="/about">Services</a>
                               </li>
-                              <li class="nav-item active">
+                              <li class="nav-item">
                                  <a class="nav-link" href="/room">Room</a>
                               </li>
-                              <li class="nav-item">
+                              <li class="nav-item  active">
                                  <a class="nav-link" href="/blog">Blog</a>
                               </li>
-                              
                               <li class="nav-item">
                                  <a class="nav-link" href="/contact">Contact Us</a>
                               </li>
@@ -64,7 +63,7 @@
       <?php include 'include/banner.php'?>
       <!-- end banner -->
       <!-- our_room -->
-      <?php include 'include/room.php'?>
+      <?php include 'include/blog.php'?>
       <!-- end our_room -->
       <!--  footer -->
       <?php include 'include/footer.php'?>
