@@ -9,59 +9,80 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-iBhx+u0Oa7/8AMxflAvLftGzTpPe5CHd8O+JdsLkaayP/hFgUBS9uP2aTbdH5zIebprJs1Pifz1iTH8Ii2NpWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
-        /* Add your styles here */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #3498db, #2ecc71);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-        }
+    /* Common styles for all screen sizes */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
 
-        .booking_ocline {
-            padding: 20px;
-        }
+.booking_ocline {
+    padding: 20px;
+}
 
-        .book_btn {
-            background-color: #fff;
-            color: #333;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
+.book_btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 
-        .book_form {
-            display: none;
-            margin-top: 20px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            z-index: 999;
-        }
+.book_form {
+    display: none;
+    margin-top: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    z-index: 999;
+}
 
-        .book_form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
+.book_form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
 
-       
+h3 {
+    color: white !important;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .booking_ocline {
+        padding: 10px;
+    }
+
+    .book_btn {
+        width: 100%;
+    }
+
+    .book_form {
+        width: 80%;
+    }
     
+    /* Adjust the font size for better readability on smaller screens */
     h3 {
-            color: white !important; 
-        }
+        font-size: 14px;
+    }
+}
+
+/* Add more media queries as needed for other screen sizes */
+
     </style>
 </head>
 <body>
@@ -100,9 +121,7 @@
                   <div class="col-md-5">
                      <div class="book_room">
                      <h3 style="text-align: justify;">At Mahalta Resorts and Convention Center, the company motto is “Where moments and memories become one.” This reflects the resort’s commitment to providing guests with an unforgettable experience that they will cherish for a lifetime. Whether you are looking to escape the city for a relaxing beach vacation or to host a memorable event, Mahalta Resorts and Convention Center has everything you need to make your dreams a reality.</h3>
-                    
-                   
-
+          
                      </div>
                   </div>
                </div>

@@ -24,19 +24,19 @@
 
 
 
-<div class="my-5 px-4">
-  
-  <div class="titlepage">
-                        <h2>BLOG</h2>
-                    </div>
-  <div class="h-line bg-dark"></div>
-  <p class="text-center mt-3">
-  Explore our blog, relax by the pool, enjoy culinary delights in our restaurant, and stay updated with exclusive offers at convention center.
-  </p>
-  
-</div>
+
+<div class="our_room">
 
 <div class="container">
+
+<div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2> Blog</h2>
+                     <p>Explore our blog, relax by the pool, enjoy culinary delights in our restaurant, and stay updated with exclusive offers at convention center.</p>
+                  </div>
+               </div>
+            </div>
   <div class="row">
     <div class="col-lg-4 col-md-6 mb-5 px-4">
       <div class="bg-white rounded shadow p-4 border-top border-4 border-dark pop  ">
@@ -94,6 +94,7 @@
     
     
   </div>
+</div>
 </div>
 
 

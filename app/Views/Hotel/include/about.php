@@ -5,121 +5,122 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>About Us and Services</title>
    <style>
-      body {
-         font-family: 'Arial', sans-serif;
-         margin: 0;
-         padding: 0;
-         background-color: #f4f4f4;
-      }
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
 
-      .container-fluid, .container {
-         max-width: 1200px;
-         margin: 0 auto;
-      }
+    .container-fluid, .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-      .row {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: space-between;
-      }
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-      .col-md-5, .col-md-3, .col-md-7 {
-         width: 48%;
-         margin-bottom: 20px;
-      }
+    .col-md-5, .col-md-3, .col-md-7 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-      .titlepage {
-         text-align: left;
-      }
+    .titlepage {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-      h2 {
-         color: #333;
-         font-size: 36px;
-         margin-bottom: 20px;
-      }
+    h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 
-      p {
-         color: #666;
-         font-size: 16px;
-         margin-bottom: 30px;
-      }
+    p {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
 
-      a.read_more {
-         color: #007bff;
-         text-decoration: none;
-         font-weight: bold;
-      }
+    a.read_more {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-      .service_item, .about_img {
-         background-color: #fff;
-         padding: 20px;
-         text-align: center;
-         border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         transition: transform 0.3s;
-      }
+    .service_item, .about_img {
+        background-color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+        width: 100%;
+    }
 
-      .service_item:hover {
-         transform: translateY(-5px);
-      }
+    .service_item:hover {
+        transform: translateY(-5px);
+    }
 
-      h3 {
-         color: black;
-         font-size: 24px;
-         margin-bottom: 10px;
-      }
+    h3 {
+        color: black;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
 
-      .about_img img {
-         max-width: 100%;
-         height: auto;
-         border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+    .about_img img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-      
-      .modal {
-   display: none;
-   position: fixed;
-   z-index: 1;
-   left: 0;
-   top: 0;
-   width: 70%;
-   height: 70%;
-   overflow: auto;
-   
-}
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
 
-.modal-content {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   max-width: 50%;
-   padding: 20px;
-  margin-top:90px;
-  margin-left:230px;
-   border-radius: 2px;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    .modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%;
+        padding: 20px;
+        border-radius: 2px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-.close {
-   position: absolute;
-   top: 0;
-   right: 0;
-   color: #fff;
-   font-size: 30px;
-   font-weight: bold;
-   padding: 10px;
-   cursor: pointer;
-}
-.titlepage {
-      text-align: center; 
-      margin-top:20px;
-   }
-  
-   </style>
+    .close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+        .col-md-5, .col-md-3, .col-md-7 {
+            width: 48%;
+        }
+    }
+</style>
+
 </head>
 <body>
+<div  class="our_room">
    <div class="container">
       <div class="titlepage">
          <h2>Our Services</h2>
@@ -170,7 +171,7 @@
 
       </div>
    </div>
-
+   </div>
    <!-- Modal -->
    <div id="myModal" class="modal">
       <div class="modal-content">

@@ -24,3 +24,8 @@ $routes->get('/admin-dashboard', 'AdminController::dashboard');
 
 
 $routes->get('/staff-dashboard', 'StaffController::dashboard');
+
+$routes->get('feedback', 'AdminController::index');
+$routes->post('feedback/submitFeedback', 'AdminController::submitFeedback');
+$routes->get('contact', 'AdminController::index');
+$routes->post('contact/submitForm', 'AdminController::submitForm');

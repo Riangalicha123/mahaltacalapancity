@@ -6,64 +6,80 @@
     <title>Your Page Title</title>
     <link rel="stylesheet" href="path/to/your/bootstrap.css"> <!-- Add the correct path to your Bootstrap CSS -->
     <style>
-        /* Add your styles here */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #3498db, #2ecc71);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-        }
+      /* Common styles for all screen sizes */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
 
-        .booking_ocline {
-            padding: 20px;
-        }
+.booking_ocline {
+    padding: 20px;
+}
 
-        .book_btn {
-            background-color: #fff;
-            color: #333;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
+.book_btn {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
 
-        .book_form {
-            display: none;
-            margin-top: 20px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            padding: 20px;
-            z-index: 999;
-        }
+.book_form {
+    display: none;
+    margin-top: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    z-index: 999;
+}
 
-        .book_form input {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
+.book_form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
 
-        .close_btn {
-        background: none;
-        border: none;
-        color: #000;
-        font-size: 18px;
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
+h3 {
+    color: white !important;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .booking_ocline {
+        padding: 10px;
     }
+
+    .book_btn {
+        width: 100%;
+    }
+
+    .book_form {
+        width: 80%;
+    }
+    
+    /* Adjust the font size for better readability on smaller screens */
+    h3 {
+        font-size: 14px;
+    }
+}
+
+/* Add more media queries as needed for other screen sizes */
+
     </style>
 </head>
 <body>
@@ -107,21 +123,69 @@
                            <button class="book_btn" onclick="showForm('room')">Room</button>
                            <div class="book_form form_content" id="roomForm">
                            
-                              <form class="row g-3">
-                                    <div class="col-md-6">
-                                       <label for="inputEmail4" class="form-label">Email</label>
-                                       <input type="email" class="form-control" id="inputEmail4">
-                                    </div>
-                                    <div class="col-md-6">
-                                       <label for="inputPassword4" class="form-label">Password</label>
-                                       <input type="password" class="form-control" id="inputPassword4">
-                                    </div>
-                                    <div class="col-12">
-                                       <label for="inputAddress" class="form-label">Address</label>
-                                       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-                              </form>
-                              <button class="close_btn" onclick="closeForm('room')">X</button>
+                          <form class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="inputFullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="inputFullName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputContact" class="form-label">Contact Number</label>
+                                    <input type="tel" class="form-control" id="inputContact">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputCheckInDate" class="form-label">Check-in Date</label>
+                                    <input type="datetime-local" class="form-control" id="inputCheckInDate">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputCheckOutDate" class="form-label">Check-out Date</label>
+                                    <input type="datetime-local" class="form-control" id="inputCheckOutDate">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputNumberOfGuests" class="form-label">Number of Guests</label>
+                                    <input type="number" class="form-control" id="inputNumberOfGuests" min="1">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputRoomNumber" class="form-label">Room Number</label>
+                                    <input type="text" class="form-control" id="inputRoomNumber">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputRoomType" class="form-label">Room Type</label>
+                                    <select class="form-select form-control" id="inputRoomType">
+                                        <option value="option"></option>
+                                        <option value="deluxe">Deluxe</option>
+                                        <option value="executive">Executive</option>
+                                        <option value="premium">Premium</option>
+                                        <option value="family">Family</option>
+                                        <option value="boutique">Boutique</option>
+                                        <option value="presidential">Presidential</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputPricePerNight" class="form-label">Price Per Night</label>
+                                    <input type="text" class="form-control" id="inputPricePerNight" readonly>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="inputTotalAmount" class="form-label">Total Amount</label>
+                                    <input type="text" class="form-control" id="inputTotalAmount" readonly>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+
+                           <button class="book_btn" onclick="toggleForm('room')">Close</button>
                            </div>
                         </div>
                         <br>
@@ -129,20 +193,52 @@
                             <button class="book_btn" onclick="showForm('restaurant')">Restaurant</button>
                             <div class="book_form form_content" id="restaurantForm">
                             <form class="row g-3">
-                                    <div class="col-md-6">
-                                       <label for="inputEmail4" class="form-label">Email</label>
-                                       <input type="email" class="form-control" id="inputEmail4">
-                                    </div>
-                                    <div class="col-md-6">
-                                       <label for="inputPassword4" class="form-label">Password</label>
-                                       <input type="password" class="form-control" id="inputPassword4">
-                                    </div>
-                                    <div class="col-12">
-                                       <label for="inputAddress" class="form-label">Address</label>
-                                       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-                              </form>
-                              <button class="close_btn" onclick="closeForm('room')">X</button>
+                            <div class="col-md-6">
+                                    <label for="inputFullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="inputFullName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="reservationDate" class="form-label">Reservation Date </label>
+                                    <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="totalAmount" class="form-label">Total Amount</label>
+                                    <input type="text" class="form-control" id="totalAmount" name="totalAmount" placeholder="Enter total amount">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="contact" class="form-label">Contact Number</label>
+                                    <input type="tel" class="form-control" id="contact" name="contact" placeholder="Enter contact number">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="restaurantName" class="form-label">Restaurant Name</label>
+                                    <input type="text" class="form-control" id="restaurantName" name="restaurantName" placeholder="Enter restaurant name">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="seatingCapacity" class="form-label">Seating Capacity</label>
+                                    <input type="number" class="form-control" id="seatingCapacity" name="seatingCapacity" min="1">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cuisineType" class="form-label">Cuisine Type</label>
+                                    <input type="text" class="form-control" id="cuisineType" name="cuisineType" placeholder="Enter cuisine type">
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+
+
+                           <button class="book_btn" onclick="toggleForm('restaurant')">Close</button>
+
                             </div>
                         </div>
                         <br>
@@ -150,42 +246,63 @@
                             <button class="book_btn" onclick="showForm('convention')">Convention</button>
                             <div class="book_form form_content" id="conventionForm">
                             <form class="row g-3">
-                                    <div class="col-md-6">
-                                       <label for="inputEmail4" class="form-label">Email</label>
-                                       <input type="email" class="form-control" id="inputEmail4">
-                                    </div>
-                                    <div class="col-md-6">
-                                       <label for="inputPassword4" class="form-label">Password</label>
-                                       <input type="password" class="form-control" id="inputPassword4">
-                                    </div>
-                                    <div class="col-12">
-                                       <label for="inputAddress" class="form-label">Address</label>
-                                       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-                              </form>
-                              <button class="close_btn" onclick="closeForm('room')">X</button>
+                                <div class="col-md-6">
+                                    <label for="inputFullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="inputFullName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="eventName" class="form-label">Event Name</label>
+                                    <input type="text" class="form-control" id="eventName" name="eventName" placeholder="Enter event name">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="eventDate" class="form-label">Event Date</label>
+                                    <input type="datetime-local" class="form-control" id="eventDate" name="eventDate">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="eventType" class="form-label">Event Type</label>
+                                    <select class="form-control" id="eventType" name="eventType">
+                                        <option value="option"></option>
+                                        <option value="conference">Conference</option>
+                                        <option value="wedding">Wedding</option>
+                                        <option value="party">Party</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="eventDescription" class="form-label">Description</label>
+                                    <textarea class="form-control" id="eventDescription" name="eventDescription" placeholder="Enter event description"></textarea>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="contactNumber" class="form-label">Contact Number</label>
+                                    <input type="tel" class="form-control" id="contactNumber" name="contactNumber" placeholder="Enter contact number">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label for="capacity" class="form-label">Capacity</label>
+                                    <input type="number" class="form-control" id="capacity" name="capacity" min="1">
+                                </div>
+
+                                
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
+
+                           <button class="book_btn" onclick="toggleForm('convention')">Close</button>
+
                             </div>
                         </div>
-                        <br>
-                        <div class="col-md-12">
-                            <button class="book_btn" onclick="showForm('pool')">Pool</button>
-                            <div class="book_form form_content" id="poolForm">
-                            <form class="row g-3">
-                                    <div class="col-md-6">
-                                       <label for="inputEmail4" class="form-label">Email</label>
-                                       <input type="email" class="form-control" id="inputEmail4">
-                                    </div>
-                                    <div class="col-md-6">
-                                       <label for="inputPassword4" class="form-label">Password</label>
-                                       <input type="password" class="form-control" id="inputPassword4">
-                                    </div>
-                                    <div class="col-12">
-                                       <label for="inputAddress" class="form-label">Address</label>
-                                       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                                    </div>
-                              </form>
-                              <button class="close_btn" onclick="closeForm('room')">X</button>
-                            </div>
+                        
+                        
                         </div>
                     </div>
                 </div>
@@ -193,22 +310,27 @@
         </div>
     </div>
 </section>
+
 <script>
-        function showForm(formId) {
-            // Hide all forms
-            document.querySelectorAll('.form_content').forEach(function(form) {
-                form.style.display = 'none';
-            });
+    function toggleForm(formId) {
+        var form = document.getElementById(formId + 'Form');
+        form.style.display = (form.style.display === 'block') ? 'none' : 'block';
+    }
+    function showForm(formId) {
+        // Hide all forms
+        document.querySelectorAll('.form_content').forEach(function(form) {
+            form.style.display = 'none';
+        });
 
-            // Show the selected form
-            document.getElementById(formId + 'Form').style.display = 'block';
-        }
+        // Show the selected form
+        document.getElementById(formId + 'Form').style.display = 'block';
+    }
 
-        function closeForm(formId) {
-            // Hide the selected form
-            document.getElementById(formId + 'Form').style.display = 'none';
-        }
-    </script>
+    function closeForm(formId) {
+        // Hide the selected form
+        document.getElementById(formId + 'Form').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>

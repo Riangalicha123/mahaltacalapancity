@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            margin: 0; /* Remove default margin */
         }
 
         .feedback-container {
@@ -24,9 +26,9 @@
         }
 
         textarea {
-            width: calc(100% - 20px);
+            width: 100%; /* Full width on all screens */
             padding: 10px;
-            margin: 10px;
+            margin: 10px 0; /* Adjust margin for better spacing */
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
@@ -34,7 +36,7 @@
         }
 
         button {
-            width: calc(100% - 20px);
+            width: 100%; /* Full width on all screens */
             background-color: #007bff;
             color: #fff;
             padding: 10px;
@@ -48,7 +50,46 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 767px) {
+            .footer {
+                text-align: center;
+            }
+
+            .col-md-4 {
+                width: 100%;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+        }
+        input[type="email"] {
+         width: 100%; 
+         max-width: 100%; 
+         padding: 10px; 
+         box-sizing: border-box;
+         margin-bottom: 10px;
+      }
     </style>
+    <script>
+        function submitForm() {
+            
+            const form = document.getElementById('request');
+            const formData = new FormData(form);
+
+            fetch('<?= base_url('contact/submitForm') ?>', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
 </head>
 <footer>
          <div class="footer">
@@ -73,11 +114,14 @@
                      </ul>
                   </div>
                   <div class="col-md-4">
-                  <h3>Feedback</h3>
-                  
-                        <textarea id="feedback" name="feedback" placeholder="Type your feedback..." required></textarea>
-
-                        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+                     <h3>Feedback</h3>
+                     <form action="<?= base_url('feedback/submitFeedback') ?>" method="post">
+                     <!-- <label for="email" style="color: white;">Email:</label> -->
+                         <input type="email" id="email" name="email" placeholder="Your email..." required>
+           
+                           <textarea id="feedback" name="feedback" placeholder="Type your feedback..." required></textarea>
+                           <button type="submit">Submit Feedback</button>
+                     </form>
                   </div>
                </div>
             </div>
