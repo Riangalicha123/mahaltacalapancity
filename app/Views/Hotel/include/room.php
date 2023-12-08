@@ -53,9 +53,9 @@
 .room_img img:hover {
   transform: scale(1.1);
 }
-
+/* 
 h3 {
-  color: #333;
+  color: skyblue;
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -64,7 +64,7 @@ p {
   color: #666;
   font-size: 16px;
   margin-bottom: 20px;
-}
+} */
 
 .price {
   color: #333;
@@ -112,84 +112,21 @@ p {
                </div>
             </div>
             <div class="row">
+            <?php foreach ($rooms as $room): ?>
                <div class="col-md-4 col-sm-6">
                   <div id="serv_hover"  class="room">
                      <div class="room_img">
-                        <figure><img src="<?=base_url()?>guest/images/room1.jpg" alt="#"/></figure>
+                        <figure><img src="<?=base_url('/guest/images/'.$room['Image']);?>" alt="#"/></figure>
                      </div>
                      <div class="bed_room">
-                        <h3>Deluxe Room</h3>
-                        <p>Indulge in the opulence of our Deluxe Rooms breathtaking views and providing a perfect retreat for a memorable stay.</p>
-                        <div class="price">$150 per night</div>
+                        <h3><?=$room['RoomType']?></h3>
+                        <p><?=$room['Description']?></p>
+                        <div class="price">₱<?=$room['PricePerNight']?></div>
                   <a href="#" class="btn-reservation">Book Now</a>
                      </div>
                   </div>
                </div>
-               <div class="col-md-4 col-sm-6">
-                  <div id="serv_hover"  class="room">
-                     <div class="room_img">
-                        <figure><img src="<?=base_url()?>guest/images/room2.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="bed_room">
-                        <h3>Executive Room</h3>
-                        <p>Experience in our Executive Suites, where spacious living areas and sophisticated design converge to create a lavish ambiance.</p>
-                        <div class="price">$150 per night</div>
-                  <a href="#" class="btn-reservation">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div id="serv_hover"  class="room">
-                     <div class="room_img">
-                        <figure><img src="<?=base_url()?>guest/images/room3.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="bed_room">
-                        <h3>Premium Room</h3>
-                        <p>Our Premium Suites offer a haven of tranquility, boasting exclusive amenities and a refined atmosphere for a truly indulgent escape.</p>
-                        <div class="price">$150 per night</div>
-                  <a href="#" class="btn-reservation">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div id="serv_hover"  class="room">
-                     <div class="room_img">
-                        <figure><img src="<?=base_url()?>guest/images/room4.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="bed_room">
-                        <h3>Family Room</h3>
-                        <p>Discover the charm of our Family Rooms, thoughtfully designed to accommodate the whole family, with ample space and a range of family-friendly amenities. </p>
-                        <div class="price">$150 per night</div>
-                  <a href="#" class="btn-reservation">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div id="serv_hover"  class="room">
-                     <div class="room_img">
-                        <figure><img src="<?=base_url()?>guest/images/room5.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="bed_room">
-                        <h3>Boutique Room</h3>
-                        <p>Unwind in style in our Boutique Rooms, uniquely crafted to provide a  modern design elements with personalized service for a distinctive stay. </p>
-                        <div class="price">$150 per night</div>
-                  <a href="#" class="btn-reservation">Book Now</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 col-sm-6">
-                  <div id="serv_hover"  class="room">
-                     <div class="room_img">
-                        <figure><img src="<?=base_url()?>guest/images/room6.jpg" alt="#"/></figure>
-                     </div>
-                     <div class="bed_room">
-                        <h3>Presidential Room</h3>
-                        <p>Embrace the ultimate in elegance with our Presidential Suite, a  exclusive privileges, ensuring an unparalleled experience in luxury living. </p>
-                        <div class="price">$150 per night</div>
-                        <a href="" class="btn-reservation">Book Now</a>
-                     </div>
-                  </div>
-               </div>
+               <?php endforeach; ?>
             </div>
          </div>
       </div>

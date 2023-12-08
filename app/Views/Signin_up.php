@@ -277,7 +277,10 @@
 				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
 			</div>
 			<!-- <span>or use your email for registration</span> -->
-			<input type="text" id="Username" name="Username" placeholder="Username" value="<?=set_value('Username')?>"/>
+			<input type="text" id="FirstName" name="FirstName" placeholder="First Name" value="<?=set_value('FirstName')?>"/>
+            <input type="text" id="LastName" name="LastName" placeholder="Last Name" value="<?=set_value('LastName')?>"/>
+            <input type="number" id="ContactNumber" name="ContactNumber" placeholder="Contact Number" value="<?=set_value('ContactNumber')?>"/>
+            <input type="text" id="Address" name="Address" placeholder="Address" value="<?=set_value('Address')?>"/>
 			<input type="email" id="Email" name="Email" placeholder="Email" value="<?=set_value('Email')?>"/>
 			<input type="password" id="Password" name="Password"placeholder="Password" value="<?=set_value('Password')?>"/>
             <input type="password" id="confirmPassword" name="confirmPassword"placeholder="Confirm Password" />

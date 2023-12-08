@@ -3,9 +3,14 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-
+use App\Models\RoomModel;
 class GuestController extends BaseController
 {
+    private $rooms;
+
+    function __construct(){
+        $this->rooms = new RoomModel();
+    }
     public function index()
     {
         //
@@ -13,7 +18,10 @@ class GuestController extends BaseController
     
     public function home()
     {
-        return view('Hotel\home');
+        $data = [
+            'rooms' => $this->rooms->findAll(),
+        ]; 
+        return view('Hotel\home', $data);
     }
     public function about()
     {
@@ -21,7 +29,10 @@ class GuestController extends BaseController
     }
     public function room()
     {
-        return view('Hotel\room');
+        $data = [
+            'rooms' => $this->rooms->findAll(),
+        ]; 
+        return view('Hotel\room', $data);
     }
     public function gallery()
     {
