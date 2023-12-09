@@ -123,62 +123,32 @@ h3 {
                            <button class="book_btn" onclick="showForm('room')">Room</button>
                            <div class="book_form form_content" id="roomForm">
                            
-                          <form class="row g-3">
+                          <form class="row g-3" action="/addReservation" method="post">
                                 <div class="col-md-6">
-                                    <label for="inputFullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="inputFullName">
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="inputContact" class="form-label">Contact Number</label>
-                                    <input type="tel" class="form-control" id="inputContact">
+                                    <label for="CheckInDate" class="form-label">Check-in Date</label>
+                                    <input type="datetime-local" class="form-control" id="CheckInDate" name="CheckInDate" required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="inputCheckInDate" class="form-label">Check-in Date</label>
-                                    <input type="datetime-local" class="form-control" id="inputCheckInDate">
+                                    <label for="CheckOutDate" class="form-label">Check-out Date</label>
+                                    <input type="datetime-local" class="form-control" id="CheckOutDate" name="CheckOutDate" required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="inputCheckOutDate" class="form-label">Check-out Date</label>
-                                    <input type="datetime-local" class="form-control" id="inputCheckOutDate">
+                                    <label for="NumberOfGuests" class="form-label">Number of Guests</label>
+                                    <input type="number" class="form-control" id="NumberOfGuests" min="1" name="NumberOfGuests" required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="inputNumberOfGuests" class="form-label">Number of Guests</label>
-                                    <input type="number" class="form-control" id="inputNumberOfGuests" min="1">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputAddress" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="inputAddress">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputRoomNumber" class="form-label">Room Number</label>
-                                    <input type="text" class="form-control" id="inputRoomNumber">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputRoomType" class="form-label">Room Type</label>
-                                    <select class="form-select form-control" id="inputRoomType">
-                                        <option value="option"></option>
-                                        <option value="deluxe">Deluxe</option>
-                                        <option value="executive">Executive</option>
-                                        <option value="premium">Premium</option>
-                                        <option value="family">Family</option>
-                                        <option value="boutique">Boutique</option>
-                                        <option value="presidential">Presidential</option>
+                                    <label for="RoomType" class="form-label">Room Type</label>
+                                    <select class="form-select form-control" id="RoomType" name="RoomType" required>
+                                        <option>Deluxe Room</option>
+                                        <option>Executive Room</option>
+                                        <option>Premium Room</option>
+                                        <option>Family Room</option>
+                                        <option>Boutique Room</option>
+                                        <option>Presidential Room</option>
                                     </select>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputPricePerNight" class="form-label">Price Per Night</label>
-                                    <input type="text" class="form-control" id="inputPricePerNight" readonly>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="inputTotalAmount" class="form-label">Total Amount</label>
-                                    <input type="text" class="form-control" id="inputTotalAmount" readonly>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">Submit</button>

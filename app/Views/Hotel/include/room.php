@@ -116,7 +116,7 @@ p {
                <div class="col-md-4 col-sm-6">
                   <div id="serv_hover"  class="room">
                      <div class="room_img">
-                        <figure><img src="<?=base_url('/guest/images/'.$room['Image']);?>" alt="#"/></figure>
+                        <figure><img src="<?=base_url('/uploads/'.$room['Image'])?>" alt="#"/></figure>
                      </div>
                      <div class="bed_room">
                         <h3><?=$room['RoomType']?></h3>

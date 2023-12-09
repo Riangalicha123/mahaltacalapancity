@@ -22,10 +22,17 @@ $routes->get('/logout', 'UserController::logout');
 
 $routes->get('/admin-dashboard', 'AdminController::dashboard');
 
-
-$routes->get('/staff-dashboard', 'StaffController::dashboard');
+$routes->get('/staff-hotel', 'StaffController::home');
+$routes->get('/staff-hotelreservation', 'StaffController::reservation');
+$routes->post('/addReservation', 'StaffController::addReservation');
+$routes->get('/staff-hotelroom', 'StaffController::room');
+$routes->post('/addRoom', 'StaffController::addRoom');
+$routes->get('/deleteRoom/(:any)', 'StaffController::deleteRoom/$1');
+$routes->get('/editRoom/(:any)', 'StaffController::editRoom/$1');
+$routes->post('/editRoom/updateRoom', 'StaffController::updateRoom');
 
 $routes->get('feedback', 'AdminController::index');
 $routes->post('feedback/submitFeedback', 'AdminController::submitFeedback');
 $routes->get('contact', 'AdminController::index');
 $routes->post('contact/submitForm', 'AdminController::submitForm');
+
