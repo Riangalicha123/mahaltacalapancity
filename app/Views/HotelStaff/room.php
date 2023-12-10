@@ -293,8 +293,11 @@
                                     <label for="RoomType">Room Type</label>
                                     <select class="custom-select form-control-border" id="RoomType" name="RoomType" required>
                                         <option>Deluxe Room</option>
+                                        <option>Executive Room</option>
+                                        <option>Premium Room</option>
                                         <option>Family Room</option>
-                                        <option>Value 3</option>
+                                        <option>Boutique Room</option>
+                                        <option>Presidential Room</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -347,7 +350,7 @@
                     <td><?=$room['Description']?></td>
                     <td><?=$room['PricePerNight']?></td>
                     <td><img src="<?=base_url('/uploads/'.$room['Image'])?>" alt="#"/></td>
-                    <td><?=$room['AvailabilityStatus']?></td>
+                    <td style="color: red; background-border: #0056b3;" ><?=$room['AvailabilityStatus']?></td>
                     <th><a class="btn btn-danger" href="delete/<?= $room['RoomID']?>">Delete</a> <a class="btn btn-info" href="/update/<?= $room['RoomID']?>">Edit</a></th>
                   </tr>
                   <?php endforeach; ?>

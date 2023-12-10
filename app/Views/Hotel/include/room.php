@@ -119,10 +119,11 @@ p {
                         <figure><img src="<?=base_url('/uploads/'.$room['Image'])?>" alt="#"/></figure>
                      </div>
                      <div class="bed_room">
-                        <h3><?=$room['RoomType']?></h3>
+                        <b><h2><?=$room['RoomType']?></h2></b>
                         <p><?=$room['Description']?></p>
                         <div class="price">₱<?=$room['PricePerNight']?></div>
                   <a href="#" class="btn-reservation">Book Now</a>
+                  <p><?=$room['AvailabilityStatus']?></p>
                      </div>
                   </div>
                </div>
