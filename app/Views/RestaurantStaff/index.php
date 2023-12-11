@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mahalta-Admin</title>
+  <title>Mahalta-Staff</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -193,18 +193,10 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/admin-dashboard" class="nav-link active">
+            <a href="/staff-hotel" class="nav-link active">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Customer
+                Home
               </p>
             </a>
           </li>
@@ -218,17 +210,17 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="/admin/hotel/reservation" class="nav-link">
+                <a href="/staff-hotelreservation" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reservation</p>
                 </a>
               </li>
-              <!-- <li class="nav-item">
-                <a href="#" class="nav-link">
+              <li class="nav-item">
+                <a href="/staff-hotelroom" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Room</p>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </li>
           
@@ -240,12 +232,11 @@
   </aside>
 
 
-  <!-- <footer class="main-footer">
+  <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer> -->
+    <strong><a href="https://adminlte.io">Mahalta Team</a>.</strong> All rights reserved.
+  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

@@ -210,7 +210,7 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="/staff-hotelreservation" class="nav-link active">
+                <a href="/staff-hotelreservation" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reservation</p>
                 </a>
@@ -223,7 +223,52 @@
               </li>
             </ul>
           </li>
-          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Restaurant
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="/staff-hotelreservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/staff-hotelroom" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dining Table</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Convention
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="/staff-hotelreservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/staff-hotelroom" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Event</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

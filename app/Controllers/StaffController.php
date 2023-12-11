@@ -53,6 +53,7 @@ class StaffController extends BaseController
             'CheckInDate' => $this->request->getPost('CheckInDate'),
             'CheckOutDate' => $this->request->getPost('CheckOutDate'),
             'NumberOfGuests' => $this->request->getPost('NumberOfGuests'),
+            'Status' => 'Pending'
         ];
 
         $inputRoomType = $this->request->getPost('RoomType');

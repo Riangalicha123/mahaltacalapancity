@@ -31,8 +31,8 @@ $routes->get('/deleteRoom/(:any)', 'StaffController::deleteRoom/$1');
 $routes->get('/editRoom/(:any)', 'StaffController::editRoom/$1');
 $routes->post('/updateRoom', 'StaffController::updateRoom');
 
-$routes->get('feedback', 'AdminController::index');
-$routes->post('feedback/submitFeedback', 'AdminController::submitFeedback');
-$routes->get('contact', 'AdminController::index');
-$routes->post('contact/submitForm', 'AdminController::submitForm');
+$routes->get('/admin-dashboard', 'AdminController::dashboard');
+$routes->get('/admin/hotel/reservation', 'AdminController::reservation');
+$routes->get('/admin/updatestatus/(:segment)/(:num)', 'AdminController::updateStatus/$1/$2');
+
 

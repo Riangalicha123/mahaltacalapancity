@@ -278,7 +278,6 @@
                     <th>NumberOfGuests</th>
                     <th>TotalAmount</th>
                     <th>Status</th>
-                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -290,7 +289,6 @@
                     <td><?=$hotelrev['CheckOutDate']?></td>
                     <td><?=$hotelrev['NumberOfGuests']?></td>
                     <td><?=$hotelrev['TotalAmount']?></td>
-                    <td><?=$hotelrev['Status']?></td>
                     <th><a class="btn btn-danger" href="delete/<?= $hotelrev['RoomID']?>">Delete</a> <a class="btn btn-info" href="/update/<?= $hotelrev['RoomID']?>">Edit</a></th>
                   </tr>
                   <?php endforeach; ?>

@@ -64,3 +64,74 @@ in APPPATH\Views\HotelStaff\room.php on line 332.
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+ERROR - 2023-12-11 10:52:21 --> mysqli_sql_exception: Unknown column 'reservations.Status' in 'field list' in C:\laragon\www\GitHub\mahaltacalapancity\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\laragon\www\GitHub\mahaltacalapancity\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\GitHub\mahaltacalapancity\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\GitHub\mahaltacalapancity\app\Controllers\AdminController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\GitHub\mahaltacalapancity\system\CodeIgniter.php(942): App\Controllers\AdminController->reservation()
+#8 C:\laragon\www\GitHub\mahaltacalapancity\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\laragon\www\GitHub\mahaltacalapancity\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\GitHub\mahaltacalapancity\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\GitHub\mahaltacalapancity\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-12-11 10:52:21 --> Unknown column 'reservations.Status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reservations`.`ReservationID`, `rooms`.`RoomID`, `rooms`.`RoomType`, `reservations`.`CheckInDate`, `reservations`.`CheckOutDate`, `reservations`.`NumberOfGuests`, `reservations`.`TotalAmount`, `reservations`.`Status`
+FROM `reservations`
+JOIN `rooms` ON `reservations`.`RoomID` = `rooms`.`RoomID`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\AdminController.php(33): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->reservation()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+ERROR - 2023-12-11 10:52:31 --> mysqli_sql_exception: Unknown column 'reservations.Status' in 'field list' in C:\laragon\www\GitHub\mahaltacalapancity\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `reserva...', 0)
+#1 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `reserva...')
+#2 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `reserva...')
+#3 C:\laragon\www\GitHub\mahaltacalapancity\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reserva...', Array, false)
+#4 C:\laragon\www\GitHub\mahaltacalapancity\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\GitHub\mahaltacalapancity\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\GitHub\mahaltacalapancity\app\Controllers\AdminController.php(33): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\GitHub\mahaltacalapancity\system\CodeIgniter.php(942): App\Controllers\AdminController->reservation()
+#8 C:\laragon\www\GitHub\mahaltacalapancity\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+#9 C:\laragon\www\GitHub\mahaltacalapancity\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\GitHub\mahaltacalapancity\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\GitHub\mahaltacalapancity\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+CRITICAL - 2023-12-11 10:52:31 --> Unknown column 'reservations.Status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `reservations`.`ReservationID`, `rooms`.`RoomID`, `rooms`.`RoomType`, `reservations`.`CheckInDate`, `reservations`.`CheckOutDate`, `reservations`.`NumberOfGuests`, `reservations`.`TotalAmount`, `reservations`.`Status`
+FROM `reservations`
+JOIN `rooms` ON `reservations`.`RoomID` = `rooms`.`RoomID`', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\AdminController.php(33): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->reservation()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+CRITICAL - 2023-12-11 12:08:44 --> Cannot redeclare generateStatusBadge() (previously declared in C:\laragon\www\GitHub\mahaltacalapancity\app\Views\Admin\Hotel\reservation.php:302)
+in APPPATH\Views\Admin\Hotel\reservation.php on line 302.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-12-11 13:00:21 --> Undefined variable $reservation
+in APPPATH\Views\Admin\Hotel\reservation.php on line 333.
+ 1 APPPATH\Views\Admin\Hotel\reservation.php(333): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $reservation', 'C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\Admin\\Hotel\\reservation.php', 333)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\Admin\\Hotel\\reservation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Admin\\Hotel\\reservation', [], true)
+ 5 APPPATH\Controllers\AdminController.php(40): view('Admin\\Hotel\\reservation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\AdminController->reservation()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
