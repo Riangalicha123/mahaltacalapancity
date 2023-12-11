@@ -1,0 +1,66 @@
+CRITICAL - 2023-12-11 06:03:12 --> Invalid file: "Staff/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Staff/index.php')
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Staff/index', [], true)
+ 3 APPPATH\Controllers\UserController.php(84): view('Staff/index')
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\UserController->LoginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+CRITICAL - 2023-12-11 06:40:41 --> Undefined variable $room
+in APPPATH\Views\HotelStaff\room.php on line 288.
+ 1 APPPATH\Views\HotelStaff\room.php(288): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $room', 'C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php', 288)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('HotelStaff\\room', [], true)
+ 5 APPPATH\Controllers\StaffController.php(87): view('HotelStaff\\room', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->room()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+CRITICAL - 2023-12-11 06:41:01 --> Undefined variable $room
+in APPPATH\Views\HotelStaff\room.php on line 288.
+ 1 APPPATH\Views\HotelStaff\room.php(288): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $room', 'C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php', 288)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('HotelStaff\\room', [], true)
+ 5 APPPATH\Controllers\StaffController.php(87): view('HotelStaff\\room', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->room()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+CRITICAL - 2023-12-11 07:15:41 --> Undefined variable $room
+in APPPATH\Views\HotelStaff\room.php on line 332.
+ 1 APPPATH\Views\HotelStaff\room.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $room', 'C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php', 332)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('HotelStaff\\room', [], true)
+ 5 APPPATH\Controllers\StaffController.php(87): view('HotelStaff\\room', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->room()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+CRITICAL - 2023-12-11 08:00:43 --> Undefined variable $data
+in APPPATH\Controllers\StaffController.php on line 191.
+ 1 APPPATH\Controllers\StaffController.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Controllers\\StaffController.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->updateRoom()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')
+CRITICAL - 2023-12-11 08:12:10 --> Undefined variable $room
+in APPPATH\Views\HotelStaff\room.php on line 332.
+ 1 APPPATH\Views\HotelStaff\room.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $room', 'C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php', 332)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\app\\Views\\HotelStaff\\room.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('HotelStaff\\room', [], true)
+ 5 APPPATH\Controllers\StaffController.php(87): view('HotelStaff\\room', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\StaffController->room()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StaffController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\mahaltacalapancity\\public\\index.php')

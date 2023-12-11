@@ -81,8 +81,8 @@ class UserController extends BaseController
                     return redirect()->to('/');
                 } else if ($data['UserRoleID'] == 2) {
                     // Redirect to Staff Dashboard
-                    return view('Staff/index');
-                } else {
+                    return view('HotelStaff/index');
+                } else if ($data['UserRoleID'] == 3) {
                     // Redirect to Admin Dashboard or any other role-specific page
                     return view('Admin/index');
                 }

@@ -29,7 +29,7 @@ $routes->get('/staff-hotelroom', 'StaffController::room');
 $routes->post('/addRoom', 'StaffController::addRoom');
 $routes->get('/deleteRoom/(:any)', 'StaffController::deleteRoom/$1');
 $routes->get('/editRoom/(:any)', 'StaffController::editRoom/$1');
-$routes->post('/editRoom/updateRoom', 'StaffController::updateRoom');
+$routes->post('/updateRoom', 'StaffController::updateRoom');
 
 $routes->get('feedback', 'AdminController::index');
 $routes->post('feedback/submitFeedback', 'AdminController::submitFeedback');

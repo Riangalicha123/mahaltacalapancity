@@ -12,6 +12,7 @@ class StaffController extends BaseController
     private $reservation;
 
     function __construct(){
+        helper(['form']);
         $this->rooms = new RoomModel();
         $this->reservation = new ReservationModel();
     }
@@ -35,17 +36,19 @@ class StaffController extends BaseController
         return view('HotelStaff\reservation', $data);
     }
     public function addReservation(){
+        helper(['form']);
         $validationRules = [
             'CheckInDate' => 'required',
             'CheckOutDate' => 'required',
             'NumberOfGuests' => 'required',
-            'RoomType' => 'required', 
+            'RoomType' => 'required',
         ];
 
         if (!$this->validate($validationRules)) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+            // Validation failed, return with validation errors
+            $validationErrors = $this->validator->getErrors();
+            return view('/room', ['validationErrors' => $validationErrors]);
         }
-
         $newReservationData = [
             'CheckInDate' => $this->request->getPost('CheckInDate'),
             'CheckOutDate' => $this->request->getPost('CheckOutDate'),
@@ -137,24 +140,55 @@ class StaffController extends BaseController
         return redirect()->to('/staff-hotelroom');
     }
 
-    public function editProd($RoomID = null){
-        $data = [
-            'rooms' => $this->rooms->where('RoomID', $RoomID)->first()
-        ];
-        return view('Staff/room',$data);
-    }
 
-    public function updateProd(){
+    public function updateRoom(){
 
-        $data = [
-            'RoomID' => $this->request->getVar('RoomID'),
-            'RoomNumber' => $this->request->getVar('RoomNumber'),
-            'RoomType' => $this->request->getVar('RoomType'),
-            'Description' => $this->request->getVar('Description'),
-            'PricePerNight' => $this->request->getVar('PricePerNight'),
-        ];
-        var_dump($data);
-        $this->rooms->set($data)->where('RoomID',$data['RoomID'])->update();
+        $file = $this->request->getFile('Image');
+    
+        // Check if a file is uploaded
+        if ($file) {
+            $newFileName = $file->getRandomName();
+    
+            $data = [
+                'RoomID' => $this->request->getVar('RoomID'),
+                'RoomNumber' => $this->request->getVar('RoomNumber'),
+                'RoomType' => $this->request->getVar('RoomType'),
+                'Description' => $this->request->getVar('Description'),
+                'PricePerNight' => $this->request->getVar('PricePerNight'),
+                'AvailabilityStatus' => $this->request->getVar('AvailabilityStatus'),
+                'Image'                => $newFileName
+            ];
+    
+            $rules = [
+                'Image' => [
+                    'uploaded[Image]',
+                    'max_size[Image,10240]', // Maximum file size in kilobytes (adjust as needed)
+                    'ext_in[Image,png,jpg,gif]' // Allow only files with the specified extensions
+                ]
+            ];
+    
+            // Validate the file and other form data
+            if ($this->validate($rules)) {
+                // Check if the file is valid and has not been moved
+                if ($file->isValid() && !$file->hasMoved()) {
+                    // Move the file to the 'uploads' directory
+                    if ($file->move(FCPATH . 'uploads/', $newFileName)) {
+                        // Save product data to the database
+                        $this->rooms->save($data);
+                        
+                    } else {
+                        // Handle file move error
+                        echo $file->getErrorString() . ' ' . $file->getError();
+                    }
+                }
+            } else {
+                // Handle validation errors
+                $data['validation'] = $this->validator;
+            }
+        } else {
+            echo('error');
+        }
         return redirect()->to('/staff-hotelroom');
     }
 }
+

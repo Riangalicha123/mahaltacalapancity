@@ -328,6 +328,62 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Edit Room Modal -->
+                    <?php foreach ($rooms as $room): ?>
+                    <div class="modal fade" id="editModal<?=$room['RoomID']?>" tabindex="-1" role="dialog" aria-labelledby="editModalLabel<?=$room['RoomID']?>" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editModalLabel<?=$room['RoomID']?>">Edit Room</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form action="/updateRoom/" method="post" enctype="multipart/form-data">
+                                <div class="card-body">
+                                <input type="hidden" name="RoomID" id="RoomID" value="<?=$room['RoomID']?>">
+                                <div class="form-group">
+                                    <label for="RoomNumber">Room Number</label>
+                                    <input type="text" class="form-control" id="RoomNumber" name="RoomNumber" value="<?= $room['RoomNumber'] ?>" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="RoomType">Room Type</label>
+                                    <select class="custom-select form-control-border" id="RoomType" name="RoomType" value="<?=$room['RoomType']?>"required>
+                                        <option>Deluxe Room</option>
+                                        <option>Executive Room</option>
+                                        <option>Premium Room</option>
+                                        <option>Family Room</option>
+                                        <option>Boutique Room</option>
+                                        <option>Presidential Room</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Description">Description</label>
+                                    <input type="text" class="form-control" id="Description" name="Description"  value="<?=$room['Description']?>"required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="PricePerNight">Price per Night</label>
+                                    <input type="number" class="form-control" id="PricePerNight" name="PricePerNight"   value="<?=$room['PricePerNight']?>"required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Image">Upload</label>
+                                    <input type="file" class="form-control" id="Image" id="inputImage" name="Image" accept="Image/*" value="<?=$room['Image']?>"required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1" >Status</label >
+                                    <input type="text" class="form-control" id="" name="AvailabilityStatus"  value="<?=$room['AvailabilityStatus']?>"required>
+                                </div>
+                                
+                                </div>
+                                    <div class="card-footer">
+                                        <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
@@ -351,7 +407,7 @@
                     <td><?=$room['PricePerNight']?></td>
                     <td><img src="<?=base_url('/uploads/'.$room['Image'])?>" alt="#"/></td>
                     <td style="color: red; background-border: #0056b3;" ><?=$room['AvailabilityStatus']?></td>
-                    <th><a class="btn btn-danger" href="delete/<?= $room['RoomID']?>">Delete</a> <a class="btn btn-info" href="/update/<?= $room['RoomID']?>">Edit</a></th>
+                    <th><a class="btn btn-danger" href="/deleteRoom/<?= $room['RoomID']?>">Delete</a> <a class="btn btn-info" data-toggle="modal" data-target="#editModal<?=$room['RoomID']?>">Edit</a></th>
                   </tr>
                   <?php endforeach; ?>
                   
@@ -376,9 +432,8 @@
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      
     </div>
-    <strong>Copyright &copy; 2023-2024 <a href="https://github.com">Mahalta</a>.</strong>
+    <strong><a href="https://adminlte.io">Mahalta Team</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
