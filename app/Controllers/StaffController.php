@@ -29,8 +29,9 @@ class StaffController extends BaseController
     {
         $data = [
             'hotelrevs' => $this->reservation
-            ->select('reservations.ReservationID, rooms.RoomID, rooms.RoomType, reservations.CheckInDate, reservations.CheckOutDate, reservations.NumberOfGuests, reservations.TotalAmount, reservations.Status')
+            ->select('reservations.ReservationID, rooms.RoomID, rooms.RoomType, reservations.CheckInDate, reservations.CheckOutDate, reservations.NumberOfGuests, reservations.TotalAmount, reservations.Status, users.UserID,  users.FirstName,  users.LastName, reservations.UserID ')
             ->join ('rooms', 'reservations.RoomID = rooms.RoomID')
+            ->join ('users', 'reservations.UserID = users.UserID')
             ->findAll()
         ]; 
         return view('HotelStaff\reservation', $data);

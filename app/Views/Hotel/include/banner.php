@@ -124,7 +124,6 @@ h3 {
                            <div class="book_form form_content" id="roomForm">
                            <?php $validation = \Config\Services::validation(); ?>
                           <form class="row g-3" action="/addReservation" method="post">
-                                
                                 <div class="col-md-6">
                                     <label for="CheckInDate" class="form-label">Check-in Date</label>
                                     <input type="datetime-local" class="form-control" id="CheckInDate" name="CheckInDate" required>
