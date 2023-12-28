@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\RoomModel;
+use App\Models\TableModel;
 use App\Models\ReservationModel;
 
 class StaffController extends BaseController
 {
     private $rooms;
+    private $tables;
     private $reservation;
 
     function __construct(){
         helper(['form']);
         $this->rooms = new RoomModel();
+        $this->tables = new TableModel();
         $this->reservation = new ReservationModel();
     }
     public function index()
@@ -23,7 +26,7 @@ class StaffController extends BaseController
     public function home()
     {
         
-        return view('HotelStaff\index');
+        return view('Staff\HotelStaff\index');
     }
     public function reservation()
     {
@@ -34,7 +37,7 @@ class StaffController extends BaseController
             ->join ('users', 'reservations.UserID = users.UserID')
             ->findAll()
         ]; 
-        return view('HotelStaff\reservation', $data);
+        return view('Staff\HotelStaff\reservation', $data);
     }
     public function addReservation(){
         helper(['form']);
@@ -86,7 +89,7 @@ class StaffController extends BaseController
         $data = [
             'rooms' => $this->rooms->findAll(),
         ]; 
-        return view('HotelStaff\room', $data);
+        return view('Staff\HotelStaff\room', $data);
     }
     public function addRoom(){
         $file = $this->request->getFile('Image');
@@ -191,6 +194,74 @@ class StaffController extends BaseController
             echo('error');
         }
         return redirect()->to('/staff-hotelroom');
+    }
+    public function resReservation()
+    {
+        $data = [
+            'restrevs' => $this->reservation
+            ->select('reservations.ReservationID, restaurant_dining_tables.TableID, restaurant_dining_tables.TableNumber, reservations.CheckInDate, reservations.CheckOutDate, reservations.NumberOfGuests, reservations.TotalAmount, reservations.Status, users.UserID,  users.FirstName,  users.LastName, reservations.UserID ')
+            ->join ('restaurant_dining_tables', 'reservations.TableID = restaurant_dining_tables.TableID')
+            ->join ('users', 'reservations.UserID = users.UserID')
+            ->findAll()
+        ]; 
+        return view('Staff\RestaurantStaff\reservation',$data);
+    }
+    public function tableReservation(){
+        helper(['form']);
+        $validationRules = [
+            'CheckInDate' => 'required',
+            'CheckOutDate' => 'required',
+            'NumberOfGuests' => 'required',
+            'TableNumber' => 'required',
+        ];
+
+        if (!$this->validate($validationRules)) {
+            // Validation failed, return with validation errors
+            $validationErrors = $this->validator->getErrors();
+            return view('/room', ['validationErrors' => $validationErrors]);
+        }
+        $newReservationData = [
+            'CheckInDate' => $this->request->getPost('CheckInDate'),
+            'CheckOutDate' => $this->request->getPost('CheckOutDate'),
+            'NumberOfGuests' => $this->request->getPost('NumberOfGuests'),
+            'Status' => 'Pending'
+        ];
+
+        $inputTableNumber = $this->request->getPost('TableNumber');
+
+
+        $tableData = $this->tables->where('TableNumber', $inputTableNumber)->first(); 
+
+
+        if ($tableData) {
+
+            $newReservationData['TableID'] = $tableData['TableID'];
+
+            $inserted = $this->reservation->insert($newReservationData);
+
+            if ($inserted) {
+
+                return redirect()->to(base_url('/room'))->with('success', 'Reservation added successfully.');
+            } else {
+
+                return redirect()->to(base_url('/room'))->with('error', 'Failed to add reservation. Please try again.');
+            }
+        } else {
+
+            return redirect()->to(base_url('/'))->with('error', 'Invalid Username or room_type. Please check your input.');
+        }
+    }
+    public function resTable()
+    {
+        $data = [
+            'tables' => $this->tables->findAll(),
+        ]; 
+        return view('Staff\RestaurantStaff\table',$data);
+    }
+    public function conReservation()
+    {
+        
+        return view('Staff\ConventionStaff\reservation');
     }
 }
 

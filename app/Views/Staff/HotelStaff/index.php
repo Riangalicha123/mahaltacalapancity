@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mahalta-Admin</title>
+  <title>Mahalta-Staff</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -171,7 +171,7 @@
           <!-- <img src="<?=base_url()?>admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image"> -->
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="#" class="d-block">Staff</a>
         </div>
       </div>
 
@@ -193,18 +193,10 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/admin-dashboard" class="nav-link active">
+            <a href="/staff-hotel" class="nav-link active">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Dashboard
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user"></i>
-              <p>
-                Customer
+                Home
               </p>
             </a>
           </li>
@@ -218,17 +210,17 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="/admin/hotel/reservation" class="nav-link">
+                <a href="/staff-hotelreservation" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reservation</p>
                 </a>
-            </li>
-              <!-- <li class="nav-item">
-                <a href="#" class="nav-link">
+              </li>
+              <li class="nav-item">
+                <a href="/staff-hotelroom" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Room</p>
                 </a>
-              </li> -->
+              </li>
             </ul>
           </li>
           <li class="nav-item">
@@ -241,20 +233,88 @@
             </a>
             <ul class="nav nav-treeview">
             <li class="nav-item">
-                <a href="/admin/restaurant/reservation" class="nav-link">
+                <a href="/staff-restaurant-reservation" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Reservation</p>
                 </a>
-            </li>
-              <!-- <li class="nav-item">
-                <a href="#" class="nav-link">
+              </li>
+              <li class="nav-item">
+                <a href="/staff-restaurant-table" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Room</p>
+                  <p>Table</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Convention
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/staff-convention-reservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="../tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
                 </a>
               </li> -->
             </ul>
           </li>
-          
+          <!-- <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Restaurant
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="/staff-hotelreservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/staff-hotelroom" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Dining Table</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Convention
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="/staff-hotelreservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/staff-hotelroom" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Event</p>
+                </a>
+              </li>
+            </ul>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -263,12 +323,11 @@
   </aside>
 
 
-  <!-- <footer class="main-footer">
+  <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer> -->
+    <strong><a href="https://adminlte.io">Mahalta Team</a>.</strong> All rights reserved.
+  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

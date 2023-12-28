@@ -205,7 +205,7 @@
             </a>
           </li>
           <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Hotel
@@ -222,11 +222,57 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/staff-hotelroom" class="nav-link active">
+                <a href="/staff-hotelroom" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Room</p>
                 </a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link active">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Restaurant
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+            <li class="nav-item">
+                <a href="/staff-restaurant-reservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/staff-restaurant-table" class="nav-link active">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Table</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-table"></i>
+              <p>
+                Convention
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/staff-convention-reservation" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservation</p>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="../tables/jsgrid.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>jsGrid</p>
+                </a>
+              </li> -->
             </ul>
           </li>
         </ul>
@@ -329,85 +375,26 @@
                         </div>
                     </div>
                     <!-- Edit Room Modal -->
-                    <?php foreach ($rooms as $room): ?>
-                    <div class="modal fade" id="editModal<?=$room['RoomID']?>" tabindex="-1" role="dialog" aria-labelledby="editModalLabel<?=$room['RoomID']?>" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="editModalLabel<?=$room['RoomID']?>">Edit Room</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <form action="/updateRoom/" method="post" enctype="multipart/form-data">
-                                <div class="card-body">
-                                <input type="hidden" name="RoomID" id="RoomID" value="<?=$room['RoomID']?>">
-                                <div class="form-group">
-                                    <label for="RoomNumber">Room Number</label>
-                                    <input type="text" class="form-control" id="RoomNumber" name="RoomNumber" value="<?= $room['RoomNumber'] ?>" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="RoomType">Room Type</label>
-                                    <select class="custom-select form-control-border" id="RoomType" name="RoomType" value="<?=$room['RoomType']?>"required>
-                                        <option>Deluxe Room</option>
-                                        <option>Executive Room</option>
-                                        <option>Premium Room</option>
-                                        <option>Family Room</option>
-                                        <option>Boutique Room</option>
-                                        <option>Presidential Room</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Description">Description</label>
-                                    <input type="text" class="form-control" id="Description" name="Description"  value="<?=$room['Description']?>"required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="PricePerNight">Price per Night</label>
-                                    <input type="number" class="form-control" id="PricePerNight" name="PricePerNight"   value="<?=$room['PricePerNight']?>"required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="Image">Upload</label>
-                                    <input type="file" class="form-control" id="Image" id="inputImage" name="Image" accept="Image/*" value="<?=$room['Image']?>"required>
-                                </div>
-                                
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1" >Status</label >
-                                    <input type="text" class="form-control" id="" name="AvailabilityStatus"  value="<?=$room['AvailabilityStatus']?>"required>
-                                </div>
-                                
-                                </div>
-                                    <div class="card-footer">
-                                        <button type="submit" class="btn btn-primary">Update</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
+                   
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
                     <th>#</th>
-                    <th>RoomNumber</th>
-                    <th>RoomTypes</th>
-                    <th>Description</th>
-                    <th>Price per Night</th>
-                    <th>Image</th>
-                    <th>Status</th>
+                    <th>Table Number</th>
+                    <th>Capacity</th>
+                    <th>Availability</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <?php foreach ($rooms as $room): ?>
+                  <?php foreach ($tables as $table): ?>
                   <tr>
-                    <td><?=$room['RoomID']?></td>
-                    <td><?=$room['RoomNumber']?></td>
-                    <td><?=$room['RoomType']?></td>
-                    <td><?=$room['Description']?></td>
-                    <td><?=$room['PricePerNight']?></td>
-                    <td><img src="<?=base_url('/uploads/'.$room['Image'])?>" alt="#"/></td>
-                    <td style="color: red; background-border: #0056b3;" ><?=$room['AvailabilityStatus']?></td>
-                    <th><a class="btn btn-danger" href="/deleteRoom/<?= $room['RoomID']?>">Delete</a> <a class="btn btn-info" data-toggle="modal" data-target="#editModal<?=$room['RoomID']?>">Edit</a></th>
+                    <td><?=$table['TableID']?></td>
+                    <td><?=$table['TableNumber']?></td>
+                    <td><?=$table['Capacity']?></td>
+                    <td><?=$table['AvailabilityStatus']?></td>
+
+                    <th><a class="btn btn-danger" href="/deleteRoom/<?= $table['TableID']?>">Delete</a> <a class="btn btn-info" data-toggle="modal" data-target="#editModal<?=$table['TableID']?>">Edit</a></th>
                   </tr>
                   <?php endforeach; ?>
                   

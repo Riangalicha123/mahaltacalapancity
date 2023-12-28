@@ -162,44 +162,29 @@ h3 {
                         <div class="col-md-12">
                             <button class="book_btn" onclick="showForm('restaurant')">Restaurant</button>
                             <div class="book_form form_content" id="restaurantForm">
-                            <form class="row g-3">
-                            <div class="col-md-6">
-                                    <label for="inputFullName" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="inputFullName">
-                                </div>
+                            <form class="row g-3" action="/tableReservation" method="post">
                                 <div class="col-md-6">
-                                    <label for="reservationDate" class="form-label">Reservation Date </label>
-                                    <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate">
+                                    <label for="CheckInDate" class="form-label">Check-in Date</label>
+                                    <input type="datetime-local" class="form-control" id="CheckInDate" name="CheckInDate" required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="totalAmount" class="form-label">Total Amount</label>
-                                    <input type="text" class="form-control" id="totalAmount" name="totalAmount" placeholder="Enter total amount">
+                                    <label for="CheckOutDate" class="form-label">Check-out Date</label>
+                                    <input type="datetime-local" class="form-control" id="CheckOutDate" name="CheckOutDate" required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="contact" class="form-label">Contact Number</label>
-                                    <input type="tel" class="form-control" id="contact" name="contact" placeholder="Enter contact number">
+                                    <label for="NumberOfGuests" class="form-label">Number of Guests</label>
+                                    <input type="number" class="form-control" id="NumberOfGuests" min="1" name="NumberOfGuests" required>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="address" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="address" name="address" placeholder="Enter address">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="restaurantName" class="form-label">Restaurant Name</label>
-                                    <input type="text" class="form-control" id="restaurantName" name="restaurantName" placeholder="Enter restaurant name">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="seatingCapacity" class="form-label">Seating Capacity</label>
-                                    <input type="number" class="form-control" id="seatingCapacity" name="seatingCapacity" min="1">
-                                </div>
-
-                                <div class="col-md-6">
-                                    <label for="cuisineType" class="form-label">Cuisine Type</label>
-                                    <input type="text" class="form-control" id="cuisineType" name="cuisineType" placeholder="Enter cuisine type">
+                                    <label for="TableNumber" class="form-label">Table</label>
+                                    <select class="form-select form-control" id="TableNumber" name="TableNumber" required>
+                                        <option>T1</option>
+                                        <option>T2</option>
+                                        <option>T3</option>
+                                    </select>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary">Submit</button>
