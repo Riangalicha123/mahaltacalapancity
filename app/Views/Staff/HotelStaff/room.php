@@ -339,11 +339,9 @@
                                     <label for="RoomType">Room Type</label>
                                     <select class="custom-select form-control-border" id="RoomType" name="RoomType" required>
                                         <option>Deluxe Room</option>
-                                        <option>Executive Room</option>
-                                        <option>Premium Room</option>
+                                        <option>Jr. Suite Room</option>
                                         <option>Family Room</option>
-                                        <option>Boutique Room</option>
-                                        <option>Presidential Room</option>
+                                        <option>Barkada Room</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -396,11 +394,9 @@
                                     <label for="RoomType">Room Type</label>
                                     <select class="custom-select form-control-border" id="RoomType" name="RoomType" value="<?=$room['RoomType']?>"required>
                                         <option>Deluxe Room</option>
-                                        <option>Executive Room</option>
-                                        <option>Premium Room</option>
+                                        <option>Jr. Suite Room</option>
                                         <option>Family Room</option>
-                                        <option>Boutique Room</option>
-                                        <option>Presidential Room</option>
+                                        <option>Barkada Room</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
